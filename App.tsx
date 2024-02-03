@@ -1,20 +1,24 @@
 import { NavigationContainer } from '@react-navigation/native'
-import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View } from 'react-native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { StyleSheet } from 'react-native'
 
 import Jotai from '@/components/Jotai'
 import Jotai2 from '@/components/Jotai2'
+
+const Stack = createNativeStackNavigator()
 
 export default function App() {
   console.log('App')
   return (
     <NavigationContainer>
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!!!</Text>
-        <Jotai></Jotai>
-        <Jotai2></Jotai2>
-        <StatusBar style="auto" />
-      </View>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Jotai"
+          component={Jotai}
+          options={{ title: 'Welcome' }}
+        />
+        <Stack.Screen name="Jotai2" component={Jotai2} />
+      </Stack.Navigator>
     </NavigationContainer>
   )
 }
