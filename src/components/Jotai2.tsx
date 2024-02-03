@@ -4,6 +4,7 @@ import { Text } from 'react-native'
 import { countAtom } from '@/datas/count'
 
 function Jotai2() {
+  console.log('Jotai2')
   const count = useAtomValue(countAtom)
 
   return (

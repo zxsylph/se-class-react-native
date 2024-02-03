@@ -4,6 +4,7 @@ import { Button, Text } from 'react-native'
 import { countAtom } from '@/datas/count'
 
 function Jotai() {
+  console.log('Jotai')
   const [count, setCounter] = useAtom(countAtom)
   const onClick = () => setCounter((prev) => prev + 1)
 
