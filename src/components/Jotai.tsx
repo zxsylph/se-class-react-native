@@ -16,8 +16,8 @@ function Jotai(props) {
     <>
       <Text>Count: {count}</Text>
       <Text>Open up App.js to start working on your app!!!</Text>
-      <Button onPress={onClick} title="Press me"></Button>
       <Button onPress={onLink} title="Link"></Button>
+      <Button onPress={onClick} title="Press me"></Button>
     </>
   )
 }
