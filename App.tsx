@@ -4,6 +4,7 @@ import { StyleSheet } from 'react-native'
 
 import Jotai from '@/components/Jotai'
 import Jotai2 from '@/components/Jotai2'
+import MyLocation from '@/components/MyLocation'
 
 const Stack = createNativeStackNavigator()
 
@@ -18,6 +19,7 @@ export default function App() {
           options={{ title: 'Welcome' }}
         />
         <Stack.Screen name="Jotai2" component={Jotai2} />
+        <Stack.Screen name="Location" component={MyLocation} />
       </Stack.Navigator>
     </NavigationContainer>
   )
