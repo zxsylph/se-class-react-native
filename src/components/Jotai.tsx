@@ -14,6 +14,9 @@ function Jotai(props) {
   const onLinkToMyLocation = () => {
     navigation.navigate('Location', { name: 'Jane' })
   }
+  const onLinkToCamera = () => {
+    navigation.navigate('Camera', { name: 'Jane' })
+  }
 
   return (
     <>
@@ -22,6 +25,7 @@ function Jotai(props) {
       <Button onPress={onLinkToJotai2} title="Link"></Button>
       <Button onPress={onClick} title="Press me"></Button>
       <Button onPress={onLinkToMyLocation} title="My Location"></Button>
+      <Button onPress={onLinkToCamera} title="Camera"></Button>
     </>
   )
 }
